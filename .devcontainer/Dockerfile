@@ -17,8 +17,6 @@ RUN apt-get install -y python3-pip
 RUN echo "source /opt/ros/humble/setup.bash" >> /home/pi/.bashrc
 RUN echo "source /home/ws/install/setup.bash" >> /home/pi/.bashrc
 RUN sudo usermod -a -G dialout pi
-RUN sudo chmod 666 ttyACM0
-RUN sudo chmod 666 ttyAMA0
 ENV SHELL /bin/bash
 
 # ********************************************************
@@ -27,4 +25,3 @@ ENV SHELL /bin/bash
 
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
-CMD ["/bin/bash"]
